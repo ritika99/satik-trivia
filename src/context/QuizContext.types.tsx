@@ -5,6 +5,7 @@ export type InitialStateType = {
     quizzes: Quiz[];
     questionNumber: number;
     selectedQuizIndex: number;
+    score: number;
 }
 
 export type QuizContextType = {
@@ -13,5 +14,6 @@ export type QuizContextType = {
 }
 
 export type Action = 
+| {type: "INCREASE_SCORE"}
 | {type: "INCREASE_QUESTION_NUMBER"}
 | {type: "RESET"}

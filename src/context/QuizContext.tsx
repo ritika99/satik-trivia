@@ -5,7 +5,8 @@ import { Action, InitialStateType, QuizContextType } from "./QuizContext.types";
 const initialState = {
     quizzes: quizlist,
     questionNumber: 1,
-    selectedQuizIndex: 0
+    selectedQuizIndex: 0,
+    score: 0
 }
 
 const initialContext = {
@@ -17,6 +18,8 @@ const QuizContext = createContext<QuizContextType>(initialContext);
 
 export const quizQuestionReducer = (state: InitialStateType, action: Action) => {
     switch(action.type) {
+        case "INCREASE_SCORE":
+            return {...state, score: state.score+5}
         case "INCREASE_QUESTION_NUMBER":
             return {...state, questionNumber: state.questionNumber+1}
         case "RESET":

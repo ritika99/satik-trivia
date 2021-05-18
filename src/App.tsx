@@ -1,10 +1,11 @@
 import React from 'react';
-import { Play } from './pages';
+import "./App.css";
+import {Router} from "./router/router";
 
 function App() {
   return (
     <div className="App">
-      <Play />
+      <Router />
     </div>
   );
 }
